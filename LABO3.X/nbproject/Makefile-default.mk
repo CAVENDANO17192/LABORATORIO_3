@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=LAB3.c
+SOURCEFILES_QUOTED_IF_SPACED=LABORATORIO3.c LCD.c analogic_digital.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/LAB3.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/LAB3.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/LABORATORIO3.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/analogic_digital.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/LABORATORIO3.p1.d ${OBJECTDIR}/LCD.p1.d ${OBJECTDIR}/analogic_digital.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/LAB3.p1
+OBJECTFILES=${OBJECTDIR}/LABORATORIO3.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/analogic_digital.p1
 
 # Source Files
-SOURCEFILES=LAB3.c
+SOURCEFILES=LABORATORIO3.c LCD.c analogic_digital.c
 
 
 
@@ -94,22 +94,54 @@ MP_PROCESSOR_OPTION=16F887
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/LAB3.p1: LAB3.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/LABORATORIO3.p1: LABORATORIO3.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/LAB3.p1.d 
-	@${RM} ${OBJECTDIR}/LAB3.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LAB3.p1 LAB3.c 
-	@-${MV} ${OBJECTDIR}/LAB3.d ${OBJECTDIR}/LAB3.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/LAB3.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/LABORATORIO3.p1.d 
+	@${RM} ${OBJECTDIR}/LABORATORIO3.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LABORATORIO3.p1 LABORATORIO3.c 
+	@-${MV} ${OBJECTDIR}/LABORATORIO3.d ${OBJECTDIR}/LABORATORIO3.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LABORATORIO3.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LCD.p1.d 
+	@${RM} ${OBJECTDIR}/LCD.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LCD.p1 LCD.c 
+	@-${MV} ${OBJECTDIR}/LCD.d ${OBJECTDIR}/LCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/analogic_digital.p1: analogic_digital.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/analogic_digital.p1.d 
+	@${RM} ${OBJECTDIR}/analogic_digital.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/analogic_digital.p1 analogic_digital.c 
+	@-${MV} ${OBJECTDIR}/analogic_digital.d ${OBJECTDIR}/analogic_digital.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/analogic_digital.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/LAB3.p1: LAB3.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/LABORATORIO3.p1: LABORATORIO3.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/LAB3.p1.d 
-	@${RM} ${OBJECTDIR}/LAB3.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LAB3.p1 LAB3.c 
-	@-${MV} ${OBJECTDIR}/LAB3.d ${OBJECTDIR}/LAB3.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/LAB3.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	@${RM} ${OBJECTDIR}/LABORATORIO3.p1.d 
+	@${RM} ${OBJECTDIR}/LABORATORIO3.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LABORATORIO3.p1 LABORATORIO3.c 
+	@-${MV} ${OBJECTDIR}/LABORATORIO3.d ${OBJECTDIR}/LABORATORIO3.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LABORATORIO3.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/LCD.p1.d 
+	@${RM} ${OBJECTDIR}/LCD.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/LCD.p1 LCD.c 
+	@-${MV} ${OBJECTDIR}/LCD.d ${OBJECTDIR}/LCD.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/LCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/analogic_digital.p1: analogic_digital.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/analogic_digital.p1.d 
+	@${RM} ${OBJECTDIR}/analogic_digital.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/analogic_digital.p1 analogic_digital.c 
+	@-${MV} ${OBJECTDIR}/analogic_digital.d ${OBJECTDIR}/analogic_digital.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/analogic_digital.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
